@@ -1,6 +1,6 @@
 package transport;
 
-public abstract class Transport {
+public abstract class Transport implements Checkable {
     public String modelName;
     public int wheelsCount;
 
@@ -25,6 +25,16 @@ public abstract class Transport {
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
     }
+
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
+
+    @Override
+    public void check() {
+        System.out.println(modelName);
+    }
+}
 
 
 
